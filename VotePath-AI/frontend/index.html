@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VotePath AI — Your Election Guidance Assistant</title>
+  <meta name="description" content="AI-powered election process guidance for Indian voters. From Voter ID registration to casting your vote — we guide you every step of the way." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="logo" aria-label="VotePath AI Home">
+      <span class="logo-mark" aria-hidden="true">🗳</span>
+      <span class="logo-text">VotePath <em>AI</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#assistant" class="nav-link">Assistant</a>
+      <a href="#guide" class="nav-link">Guide</a>
+      <button class="nav-cta" onclick="openSection('eligibility')">Check Eligibility</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="hero" aria-label="Hero section">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-orb hero-orb--1"></div>
+    <div class="hero-orb hero-orb--2"></div>
+    <div class="hero-orb hero-orb--3"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="container">
+    <div class="hero-badge">
+      <span class="badge-dot" aria-hidden="true"></span>
+      AI-Powered Civic Tech · Made for India
+    </div>
+    <h1 class="hero-title">
+      Your complete guide<br />
+      <em>from first voter ID</em><br />
+      to casting your vote.
+    </h1>
+    <p class="hero-sub">
+      VotePath AI guides first-time voters, students, rural citizens, and the elderly
+      through every step of India's election process — in plain, simple language.
+    </p>
+    <div class="hero-actions">
+      <button class="btn btn--primary" onclick="openSection('assistant')">
+        <span>Ask the Assistant</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="btn btn--outline" onclick="openSection('eligibility')">Check My Eligibility</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">95cr+</span>
+        <span class="stat-label">Eligible Voters in India</span>
+      </div>
+      <div class="stat-div" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat-num">10.5L+</span>
+        <span class="stat-label">Polling Booths Nationwide</span>
+      </div>
+      <div class="stat-div" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat-num">1950</span>
+        <span class="stat-label">Voter Helpline (Toll Free)</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span>Scroll to explore</span>
+    <svg width="12" height="20" viewBox="0 0 12 20" fill="none"><rect x="1" y="1" width="10" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle class="scroll-dot" cx="6" cy="6" r="2" fill="currentColor"/></svg>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     JOURNEY STRIP
+══════════════════════════════════════ -->
+<section class="journey" aria-label="Voter journey steps">
+  <div class="container">
+    <div class="journey-track">
+      <div class="journey-step" tabindex="0">
+        <div class="journey-icon" aria-hidden="true">📋</div>
+        <div class="journey-label">Check Eligibility</div>
+      </div>
+      <div class="journey-arrow" aria-hidden="true">→</div>
+      <div class="journey-step" tabindex="0">
+        <div class="journey-icon" aria-hidden="true">📄</div>
+        <div class="journey-label">Prepare Documents</div>
+      </div>
+      <div class="journey-arrow" aria-hidden="true">→</div>
+      <div class="journey-step" tabindex="0">
+        <div class="journey-icon" aria-hidden="true">🪪</div>
+        <div class="journey-label">Register Voter ID</div>
+      </div>
+      <div class="journey-arrow" aria-hidden="true">→</div>
+      <div class="journey-step" tabindex="0">
+        <div class="journey-icon" aria-hidden="true">📍</div>
+        <div class="journey-label">Find Booth</div>
+      </div>
+      <div class="journey-arrow" aria-hidden="true">→</div>
+      <div class="journey-step" tabindex="0">
+        <div class="journey-icon" aria-hidden="true">🗳️</div>
+        <div class="journey-label">Cast Your Vote</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FEATURES DASHBOARD
+══════════════════════════════════════ -->
+<section class="features" id="features" aria-label="Features">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">What VotePath AI Does</p>
+      <h2 class="section-title">Everything a voter needs,<br /><em>in one place.</em></h2>
+    </div>
+    <div class="feature-grid">
+
+      <button class="feature-card feature-card--large" onclick="openSection('assistant')" aria-label="Open AI Assistant">
+        <div class="fc-accent" aria-hidden="true"></div>
+        <div class="fc-icon" aria-hidden="true">🤖</div>
+        <h3 class="fc-title">Smart AI Assistant</h3>
+        <p class="fc-desc">Ask anything about elections in plain language. Get step-by-step guidance powered by Google Gemini.</p>
+        <span class="fc-cta">Ask a Question →</span>
+      </button>
+
+      <button class="feature-card" onclick="openSection('eligibility')" aria-label="Check eligibility">
+        <div class="fc-icon" aria-hidden="true">✅</div>
+        <h3 class="fc-title">Eligibility Checker</h3>
+        <p class="fc-desc">Find out if you can vote, and what steps to take next.</p>
+        <span class="fc-cta">Check Now →</span>
+      </button>
+
+      <button class="feature-card" onclick="openSection('documents')" aria-label="View document checklist">
+        <div class="fc-icon" aria-hidden="true">📋</div>
+        <h3 class="fc-title">Document Checklist</h3>
+        <p class="fc-desc">Know exactly which documents you need — for registration, correction, or transfer.</p>
+        <span class="fc-cta">View Checklist →</span>
+      </button>
+
+      <button class="feature-card" onclick="openSection('booth')" aria-label="Find polling booth">
+        <div class="fc-icon" aria-hidden="true">📍</div>
+        <h3 class="fc-title">Polling Booth Finder</h3>
+        <p class="fc-desc">Locate your nearest polling booth and electoral offices using Google Maps.</p>
+        <span class="fc-cta">Find Booth →</span>
+      </button>
+
+      <button class="feature-card" onclick="openSection('reminder')" aria-label="Set election reminder">
+        <div class="fc-icon" aria-hidden="true">📅</div>
+        <h3 class="fc-title">Election Reminders</h3>
+        <p class="fc-desc">Set Google Calendar reminders for registration deadlines and election day.</p>
+        <span class="fc-cta">Set Reminder →</span>
+      </button>
+
+      <button class="feature-card" onclick="openSection('guide')" aria-label="View full voter guide">
+        <div class="fc-icon" aria-hidden="true">📖</div>
+        <h3 class="fc-title">Complete Voter Guide</h3>
+        <p class="fc-desc">Step-by-step guide to getting your Voter ID — from application to approval.</p>
+        <span class="fc-cta">Read Guide →</span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTIONS (Hidden panels)
+══════════════════════════════════════ -->
+<div id="sections-container">
+
+  <!-- ── AI ASSISTANT ── -->
+  <section class="panel" id="assistant" aria-label="AI Assistant">
+    <div class="container">
+      <div class="panel-header">
+        <button class="back-btn" onclick="closeSection()" aria-label="Back to features">← Back</button>
+        <h2 class="panel-title">🤖 Election Assistant</h2>
+        <p class="panel-sub">Ask me anything about Indian elections — Voter ID, booth, eligibility, transfers, and more.</p>
+      </div>
+
+      <div class="chat-window" role="log" aria-live="polite" aria-label="Chat messages" id="chatWindow">
+        <div class="chat-msg chat-msg--bot">
+          <div class="msg-avatar" aria-hidden="true">🗳️</div>
+          <div class="msg-bubble">
+            <p>Namaste! 🙏 I'm VotePath AI, your personal election guide.</p>
+            <p>I can help you with:</p>
+            <ul>
+              <li>Voter ID registration & tracking</li>
+              <li>Eligibility questions</li>
+              <li>Document requirements</li>
+              <li>Address correction or transfer</li>
+              <li>Lost voter ID replacement</li>
+              <li>Finding your polling booth</li>
+            </ul>
+            <p>What would you like to know?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-prompts" role="group" aria-label="Quick question suggestions">
+        <p class="qp-label">Quick questions:</p>
+        <div class="qp-grid">
+          <button class="qp-btn" onclick="sendQuickPrompt('How do I register for a voter ID?')">How to register for voter ID?</button>
+          <button class="qp-btn" onclick="sendQuickPrompt('My voter ID has wrong address. How do I correct it?')">Wrong address on voter ID</button>
+          <button class="qp-btn" onclick="sendQuickPrompt('I lost my voter ID. What should I do?')">Lost my voter ID</button>
+          <button class="qp-btn" onclick="sendQuickPrompt('I moved to a new city. How do I transfer my voter ID?')">Transfer constituency</button>
+          <button class="qp-btn" onclick="sendQuickPrompt('How do I check my voter ID application status?')">Check application status</button>
+          <button class="qp-btn" onclick="sendQuickPrompt('What is NOTA in Indian elections?')">What is NOTA?</button>
+        </div>
+      </div>
+
+      <div class="chat-input-row">
+        <label for="chatInput" class="sr-only">Type your election question</label>
+        <input
+          type="text"
+          id="chatInput"
+          class="chat-input"
+          placeholder="Ask about voter ID, eligibility, corrections, booths..."
+          aria-label="Type your election question"
+          onkeydown="handleChatKey(event)"
+        />
+        <button class="chat-send" onclick="sendMessage()" aria-label="Send message">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M18 10L2 3l4 7-4 7 16-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ELIGIBILITY CHECKER ── -->
+  <section class="panel" id="eligibility" aria-label="Eligibility Checker">
+    <div class="container">
+      <div class="panel-header">
+        <button class="back-btn" onclick="closeSection()" aria-label="Back to features">← Back</button>
+        <h2 class="panel-title">✅ Eligibility Checker</h2>
+        <p class="panel-sub">Find out if you're eligible to vote in India</p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-group">
+          <label for="ageInput" class="form-label">Your Age</label>
+          <input type="number" id="ageInput" class="form-input" placeholder="Enter your age" min="1" max="120" aria-required="true" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Are you an Indian Citizen?</label>
+          <div class="radio-group" role="group" aria-label="Citizenship status">
+            <label class="radio-label">
+              <input type="radio" name="citizen" value="yes" class="radio-input" checked /> Yes, I am an Indian citizen
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="citizen" value="no" class="radio-input" /> No
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Do you already have a Voter ID?</label>
+          <div class="radio-group" role="group" aria-label="Voter ID status">
+            <label class="radio-label">
+              <input type="radio" name="hasId" value="yes" class="radio-input" /> Yes, I have a Voter ID
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="hasId" value="no" class="radio-input" checked /> No, I don't have one yet
+            </label>
+          </div>
+        </div>
+        <button class="btn btn--primary w-full" onclick="checkEligibility()">Check My Eligibility</button>
+      </div>
+
+      <div id="eligibilityResult" class="result-card" aria-live="polite" style="display:none;"></div>
+    </div>
+  </section>
+
+  <!-- ── DOCUMENT CHECKLIST ── -->
+  <section class="panel" id="documents" aria-label="Document Checklist">
+    <div class="container">
+      <div class="panel-header">
+        <button class="back-btn" onclick="closeSection()" aria-label="Back to features">← Back</button>
+        <h2 class="panel-title">📋 Document Checklist</h2>
+        <p class="panel-sub">Know exactly what documents you need</p>
+      </div>
+
+      <div class="tab-row" role="tablist" aria-label="Document checklist type">
+        <button class="tab-btn tab-btn--active" role="tab" aria-selected="true" onclick="loadChecklist('new_registration', this)">New Registration</button>
+        <button class="tab-btn" role="tab" aria-selected="false" onclick="loadChecklist('correction', this)">Correction</button>
+        <button class="tab-btn" role="tab" aria-selected="false" onclick="loadChecklist('transfer', this)">Constituency Transfer</button>
+      </div>
+
+      <div id="checklistResult" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ── POLLING BOOTH FINDER ── -->
+  <section class="panel" id="booth" aria-label="Polling Booth Finder">
+    <div class="container">
+      <div class="panel-header">
+        <button class="back-btn" onclick="closeSection()" aria-label="Back to features">← Back</button>
+        <h2 class="panel-title">📍 Polling Booth Finder</h2>
+        <p class="panel-sub">Locate your nearest polling booth and electoral office</p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="boothCity" class="form-label">City / District</label>
+            <input type="text" id="boothCity" class="form-input" placeholder="e.g. Mumbai, Delhi, Hyderabad" />
+          </div>
+          <div class="form-group">
+            <label for="boothPincode" class="form-label">Pincode</label>
+            <input type="text" id="boothPincode" class="form-input" placeholder="e.g. 400001" maxlength="6" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="boothArea" class="form-label">Area / Locality (optional)</label>
+          <input type="text" id="boothArea" class="form-input" placeholder="e.g. Bandra West, Connaught Place" />
+        </div>
+        <button class="btn btn--primary w-full" onclick="findBooth()">Find Polling Booth</button>
+      </div>
+
+      <div id="boothResult" aria-live="polite"></div>
+      <div id="mapContainer" class="map-container" aria-label="Map showing polling booth location"></div>
+
+      <div class="info-callout" role="note">
+        <span aria-hidden="true">💡</span>
+        <div>
+          <strong>Most Accurate Method:</strong> Visit <a href="https://electoralsearch.eci.gov.in" target="_blank" rel="noopener noreferrer">electoralsearch.eci.gov.in</a> to find your exact assigned polling booth using your voter ID number.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ELECTION REMINDERS ── -->
+  <section class="panel" id="reminder" aria-label="Election Reminders">
+    <div class="container">
+      <div class="panel-header">
+        <button class="back-btn" onclick="closeSection()" aria-label="Back to features">← Back</button>
+        <h2 class="panel-title">📅 Election Reminders</h2>
+        <p class="panel-sub">Set Google Calendar reminders for important election dates</p>
+      </div>
+
+      <div class="reminder-cards">
+        <div class="reminder-type-card" data-type="registration_deadline">
+          <div class="rtc-icon" aria-hidden="true">📋</div>
+          <div class="rtc-info">
+            <h3 class="rtc-title">Voter Registration Deadline</h3>
+            <p class="rtc-desc">Last date to register as a new voter</p>
+          </div>
+          <div class="rtc-check" aria-hidden="true">○</div>
+        </div>
+        <div class="reminder-type-card" data-type="correction_deadline">
+          <div class="rtc-icon" aria-hidden="true">✏️</div>
+          <div class="rtc-info">
+            <h3 class="rtc-title">Voter ID Correction Deadline</h3>
+            <p class="rtc-desc">Last date to submit corrections to your voter ID</p>
+          </div>
+          <div class="rtc-check" aria-hidden="true">○</div>
+        </div>
+        <div class="reminder-type-card" data-type="election_day">
+          <div class="rtc-icon" aria-hidden="true">🗳️</div>
+          <div class="rtc-info">
+            <h3 class="rtc-title">Election Day</h3>
+            <p class="rtc-desc">Reminder to go vote on election day</p>
+          </div>
+          <div class="rtc-check" aria-hidden="true">○</div>
+        </div>
+      </div>
+
+      <div class="form-card" style="margin-top:1.5rem;">
+        <div class="form-group">
+          <label for="reminderDate" class="form-label">Date for Reminder</label>
+          <input type="date" id="reminderDate" class="form-input" aria-required="true" />
+        </div>
+        <button class="btn btn--primary w-full" onclick="createReminder()">Add to Google Calendar</button>
+      </div>
+
+      <div id="reminderResult" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ── VOTER GUIDE ── -->
+  <section class="panel" id="guide" aria-label="Complete Voter Guide">
+    <div class="container">
+      <div class="panel-header">
+        <button class="back-btn" onclick="closeSection()" aria-label="Back to features">← Back</button>
+        <h2 class="panel-title">📖 Complete Voter ID Guide</h2>
+        <p class="panel-sub">Everything you need to know about getting your Voter ID in India</p>
+      </div>
+      <div id="guideContent" aria-live="polite">
+        <div class="loading-state" aria-label="Loading guide">
+          <div class="spinner" aria-hidden="true"></div>
+          <p>Loading your guide...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /sections-container -->
+
+
+<!-- ══════════════════════════════════════
+     QUICK LINKS STRIP
+══════════════════════════════════════ -->
+<section class="quick-links" aria-label="Official resources">
+  <div class="container">
+    <p class="ql-label">Official Resources</p>
+    <div class="ql-row">
+      <a href="https://voters.eci.gov.in" target="_blank" rel="noopener noreferrer" class="ql-item">
+        <span aria-hidden="true">🏛️</span> voters.eci.gov.in
+      </a>
+      <a href="https://electoralsearch.eci.gov.in" target="_blank" rel="noopener noreferrer" class="ql-item">
+        <span aria-hidden="true">🔍</span> Electoral Search
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.eci.citizen" target="_blank" rel="noopener noreferrer" class="ql-item">
+        <span aria-hidden="true">📱</span> Voter Helpline App
+      </a>
+      <div class="ql-item ql-phone">
+        <span aria-hidden="true">📞</span> Helpline: <strong>1950</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">VotePath <em>AI</em></span>
+        <p class="footer-tagline">Making democracy accessible, one voter at a time.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://voters.eci.gov.in" target="_blank" rel="noopener noreferrer">ECI Portal</a>
+        <a href="https://electoralsearch.eci.gov.in" target="_blank" rel="noopener noreferrer">Electoral Search</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 VotePath AI — Built for PromptWars Hackathon. Data sourced from Election Commission of India.</p>
+      <p class="footer-disclaimer">This is an informational tool. Always verify with official ECI portals for the latest information.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
